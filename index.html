@@ -6,56 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form in HTML and CSS | Codehal</title>
-    <link rel="stylesheet" href="./Login/style.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./Login/Logo.png" type="image/x-icon">
 </head>
 
 <body>
-<form action="Home page/Home Page.html" method="post">
-    <div class="wrapper">        
-        <h1>Login</h1>
-        <div class="input-box">
-            <input type="text" name="user" id="user" placeholder="Username"  minlength="8" required>
-            <i class='bx bxs-user'></i>
+    <form action="./home.html" method="post">
+        <h2>login</h2>
+        <div class="input-field">
+            <label for="name">user name</label>
+            <input type="text" name="name" id="name" autocomplete="off">
         </div>
-        <div class="input-box">
-            <input type="password" name="password" id="password" placeholder="Password" maxlength="3" required>
-            <i class='bx bxs-lock-alt'></i>
+
+        <div class="input-field">
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" autocomplete="off">
         </div>
-        <div class="remember-forgot">
-            <label><input type="checkbox"><span>Remember me</span></label>
-            <a href="#">forgot Password?</a>
-        </div>            
-            
-        <input type="submit" class="btn" name="login" id="login" value="Login" onclock="get()"/>           
-            
-        <div class="register-Link">
-            <p>Don't Have An Account?<a href="#">Register</a></p>
-        </div>        
-    </div>    
-</form>
 
-<script type="text/javascript">
-    function get()
-    {
-        let username=document.getElementById("user").value;
-        let password=document.getElementById("password").value;
+        <div class="tick-mark">
+            <input type="checkbox" id="check">
+            <label for="check">remember me</label>
+        </div>
 
-        if(username=="sajith123")
-        {
-            alert("currect user name");
-        }
-        else if(password=="123")
-        {
-            alert("currect Password");
-        }
-        else
-        {
-            alert("Invalid Password and username, Please try again");
-        }
-    }
-</script>
+        <button type="submit" class="submit">login</button>
+
+        <div class="option-panel">
+            <hr>
+            <p class="options">or login with</p>
+            <hr>
+        </div>
+
+        <div class="social-link">
+            <p class="loginpic"><i class='bx bxl-google'>google</i></p>
+            <p class="loginpic"><i class='bx bxl-facebook'>facebook</i></p>
+        </div>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.querySelector('#name').value;
+            const password = document.querySelector('#password').value;
+            if (name === '' || password === '') {
+                alert('Please fill in all fields');
+            } else {
+                alert('Login Successful');
+                window.location.href = "./home.html";
+            }
+        });
+    </script>
 </body>
 
 </html>

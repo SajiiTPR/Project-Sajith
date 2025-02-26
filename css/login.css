@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: url(../image/login.jpg)fixed center/cover no-repeat;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  text-transform: capitalize;
+  margin: 15vh auto;
+  color: azure;
+  font-size: 20px;
+  backdrop-filter: blur(5px);
+  background-color:  rgba(255, 255, 255, .1);
+  gap: 25px;
+  box-shadow: 0 0 3px white,0 0 9px rgb(0, 247, 255),0 0 18px white;
+  padding: 10px 20px;
+  border-radius: 20px 20px 10px 10px;
+}
+h2{
+  text-align: center;
+  cursor: default;
+  font-size: 36px;
+}
+.input-field{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.input-field label{
+  font-size: 16px;
+}
+.input-field input{
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid grey;
+  background: none;
+  border-radius: 15px;
+  color: antiquewhite;
+}
+.tick-mark{
+  font-size: 12px;
+  color: azure;
+  margin: 0;
+  padding: 0;
+  word-spacing: .3em;
+}
+.submit{
+  width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: aliceblue;
+  text-shadow: 0 0 4px black;
+  transition: .2s linear;
+}
+.submit a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.submit:hover{
+  cursor: pointer;
+  background-color: rgb(22, 90, 215);
+}
+.option-panel{
+  display: flex;
+  align-items: center;
+}
+.option-panel hr{
+  flex: 1;
+}
+.option-panel p{
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+.social-link{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  align-items: center;
+}
+.social-link i{
+  border: 1px solid green;
+  width: 10vw;
+  text-align: center;
+  padding: 3px 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  word-spacing: .2em;
+  text-shadow: 0 0 3px rgba(200,200,200,.6);
+  word-spacing: 2em;
+  margin-bottom: 20px;
+}
+hr{
+  border-color: aqua;
+}
+.social-link .bxl-google{
+  border: 1px solid rgb(255, 234, 0);
+  color: chocolate;
+}
+.social-link .bxl-facebook{
+  border: 1px solid rgb(0, 26, 255);
+  color: blue;
+}
